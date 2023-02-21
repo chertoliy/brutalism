@@ -8,12 +8,13 @@
 }
 
 body {
-   height: 800px;
+   height: 100%;
    background: #3200F9;
    font-family: 'Noto Sans', sans-serif;
    font-size: 40px;
    line-height: 54.48px;
    text-transform: uppercase;
+   overflow: hidden;
 }
 
 a {
@@ -57,7 +58,8 @@ h2 {
    position: absolute;
    padding: 10px 20px 40px;
    box-shadow: -329px 124px 98px rgba(0, 0, 0, 0.01), -210px 79px 90px rgba(0, 0, 0, 0.05), -118px 45px 76px rgba(0, 0, 0, 0.18), -53px 20px 56px rgba(0, 0, 0, 0.3), -13px 5px 31px rgba(0, 0, 0, 0.34), 0px 0px 0px rgba(0, 0, 0, 0.35);
-   overflow-y: scroll;
+   overflow: scroll;
+   transition: all 0.5s;
 
    &::-webkit-scrollbar {
       display: none;
@@ -241,6 +243,10 @@ h2 {
    &__text {}
 
    &__link {}
+}
+
+.slide--close {
+   transform: translateY(-100%);
 }
 
 @media (max-width: 375px) {
