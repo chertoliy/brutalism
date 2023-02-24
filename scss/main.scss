@@ -258,6 +258,11 @@ h2 {
       font-size: 25px;
       line-height: 34.05px;
       text-transform: uppercase;
+      overflow: visible;
+      
+      &::-webkit-scrollbar {
+         display: none;
+      }
    }
 
    h1 {
