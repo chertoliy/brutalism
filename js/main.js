@@ -77,11 +77,6 @@ function resetSlides() {
 window.onload = mobileDisableScrollEnd;
 function mobileDisableScrollEnd() {
    if (window.innerWidth <= 415) {
-      checkScrollDirection,
-      checkScrollDirectionIsDown,
-      scrollEnd1,
-      scrollEnd2,
-      scrollEnd3,
-      scrollEnd4 = () => { };
+      checkScrollDirectionIsDown = () => {};
    };
 };
