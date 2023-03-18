@@ -71,7 +71,7 @@ function resetSlides() {
 // Mobile version listener to disable desktop functions
 window.onload = function () { mobileDisableScrollEnd() };
 function mobileDisableScrollEnd() {
-   if (window.innerWidth < 376) {
+   if (window.innerWidth <= 415) {
       checkScrollDirection = () => { };
       checkScrollDirectionIsDown = () => { };
       scrollEnd1 = () => { };
