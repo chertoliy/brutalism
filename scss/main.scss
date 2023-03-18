@@ -72,8 +72,6 @@ h2 {
    &__img {
       display: block;
    }
-
-   &__link {}
 }
 
 .heading {
@@ -159,8 +157,6 @@ h2 {
       margin-bottom: 20px;
    }
 
-   &__text {}
-
    &__img-5 {
       grid-area: 2/2/span 1/span 2;
    }
@@ -181,8 +177,6 @@ h2 {
          width: 540px;
       }
    }
-
-   &__img {}
 }
 
 .slide-03 {
@@ -193,8 +187,6 @@ h2 {
    &__box {
       display: flex;
    }
-
-   &__img {}
 
    &__text {
       &:last-of-type {
@@ -227,10 +219,6 @@ h2 {
    background: #F21B1B;
    color: #fff;
 
-   &__img {}
-
-   &__text {}
-
    &__link {
       text-decoration: underline;
    }
@@ -239,10 +227,6 @@ h2 {
 .slide-05 {
    z-index: 0;
    color: #fff;
-
-   &__text {}
-
-   &__link {}
 }
 
 .slide--close {
@@ -297,8 +281,6 @@ h2 {
       &__img {
          display: block;
       }
-
-      &__link {}
    }
 
    .slide-00,
@@ -555,8 +537,6 @@ h2 {
          background: url(../images/slide-04-rocking-balls-mobile.jpg);
       }
 
-      &__text {}
-
       &__link {
          font-size: 22px;
          margin-bottom: 10px;
@@ -572,13 +552,9 @@ h2 {
          margin-bottom: 10px;
       }
 
-      &__text {}
-
       &__img {
          width: 345px;
          height: 180px;
       }
-
-      &__link {}
    }
 }
