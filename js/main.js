@@ -5,6 +5,7 @@ const slide1 = document.querySelector('.slide-01');
 const slide2 = document.querySelector('.slide-02');
 const slide3 = document.querySelector('.slide-03');
 const slide4 = document.querySelector('.slide-04');
+const removeSlide = document.querySelector('.slide--close');
 const resetButton = document.querySelector('.background__link');
 
 // Remove slides after end of scroll
@@ -53,30 +54,34 @@ function scrollEnd4() {
 resetButton.onclick = resetSlides;
 
 function resetSlides() {
-   setTimeout(() => {slide0.classList.remove('slide--close')}, 1800);
+   setTimeout(() => slide0.classList.remove('slide--close'), 1800);
    setTimeout(() => {
       slide1.classList.remove('slide--close');
-      slide1.scrollTop = 0}, 1400);
+      slide1.scrollTop = 0
+   }, 1400);
    setTimeout(() => {
       slide2.classList.remove('slide--close');
-      slide2.scrollTop = 0}, 1000);
+      slide2.scrollTop = 0
+   }, 1000);
    setTimeout(() => {
       slide3.classList.remove('slide--close');
-      slide3.scrollTop = 0}, 600);
+      slide3.scrollTop = 0
+   }, 600);
    setTimeout(() => {
       slide4.classList.remove('slide--close');
-      slide4.scrollTop = 0}, 200);
+      slide4.scrollTop = 0
+   }, 200);
 };
 
 // Mobile version listener to disable desktop functions
-window.onload = function () { mobileDisableScrollEnd() };
+window.onload = mobileDisableScrollEnd;
 function mobileDisableScrollEnd() {
    if (window.innerWidth <= 415) {
-      checkScrollDirection = () => { };
-      checkScrollDirectionIsDown = () => { };
-      scrollEnd1 = () => { };
-      scrollEnd2 = () => { };
-      scrollEnd3 = () => { };
+      checkScrollDirection,
+      checkScrollDirectionIsDown,
+      scrollEnd1,
+      scrollEnd2,
+      scrollEnd3,
       scrollEnd4 = () => { };
    };
 };
