@@ -27,7 +27,7 @@ function checkScrollDirectionIsDown(event) {
 
 slide1.onscroll = scrollEnd1;
 function scrollEnd1() {
-   if ((slide1.scrollTop + slide1.clientHeight) == slide1.scrollHeight && slide0.classList.contains('slide--close')) {
+   if ((slide1.scrollTop + slide1.clientHeight) == slide1.scrollHeight) {
       slide1.classList.add('slide--close');
       slide2.classList.remove('scroll--disabled');
    };
@@ -35,7 +35,7 @@ function scrollEnd1() {
 
 slide2.onscroll = scrollEnd2;
 function scrollEnd2() {
-   if ((slide2.scrollTop + slide2.clientHeight) == slide2.scrollHeight && slide1.classList.contains('slide--close')) {
+   if ((slide2.scrollTop + slide2.clientHeight) == slide2.scrollHeight) {
       slide2.classList.add('slide--close');
       slide3.classList.remove('scroll--disabled');
    };
@@ -43,7 +43,7 @@ function scrollEnd2() {
 
 slide3.onscroll = scrollEnd3;
 function scrollEnd3() {
-   if ((slide3.scrollTop + slide3.clientHeight) == slide3.scrollHeight && slide1.classList.contains('slide--close')) {
+   if ((slide3.scrollTop + slide3.clientHeight) == slide3.scrollHeight) {
       slide3.classList.add('slide--close');
       slide4.classList.remove('scroll--disabled');
    };
@@ -51,7 +51,7 @@ function scrollEnd3() {
 
 slide4.onscroll = scrollEnd4;
 function scrollEnd4() {
-   if ((slide4.scrollTop + slide4.clientHeight) == slide4.scrollHeight && slide1.classList.contains('slide--close')) {
+   if ((slide4.scrollTop + slide4.clientHeight) == slide4.scrollHeight) {
       slide4.classList.add('slide--close');
    };
 };
@@ -62,23 +62,23 @@ function resetSlides() {
    setTimeout(() => slide0.classList.remove('slide--close'), 1800);
    setTimeout(() => {
       slide1.classList.remove('slide--close');
-      slide1.scrollTop = 0;
       slide1.classList.add('scroll--disabled');
+      slide1.scrollTop = 0;
    }, 1400);
    setTimeout(() => {
       slide2.classList.remove('slide--close');
-      slide2.scrollTop = 0;
       slide2.classList.add('scroll--disabled');
+      slide2.scrollTop = 0;
    }, 1000);
    setTimeout(() => {
       slide3.classList.remove('slide--close');
-      slide3.scrollTop = 0;
       slide3.classList.add('scroll--disabled');
+      slide3.scrollTop = 0;
    }, 600);
    setTimeout(() => {
       slide4.classList.remove('slide--close');
-      slide4.scrollTop = 0;
       slide4.classList.add('scroll--disabled');
+      slide4.scrollTop = 0;
    }, 200);
 };
 
