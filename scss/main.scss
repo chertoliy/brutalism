@@ -74,6 +74,10 @@ h2 {
    }
 }
 
+.scroll--disabled {
+   overflow: hidden;
+}
+
 .heading {
 
    &:nth-of-type(1),

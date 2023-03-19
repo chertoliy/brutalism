@@ -10,11 +10,14 @@ const resetButton = document.querySelector('.background__link');
 
 // Remove slides after end of scroll
 slide0.addEventListener('wheel', checkScrollDirection);
+
 function checkScrollDirection(event) {
    if (checkScrollDirectionIsDown(event)) {
       slide0.classList.add('slide--close');
+      slide1.classList.remove('scroll--disabled');
    };
 };
+
 function checkScrollDirectionIsDown(event) {
    if (event.wheelDelta) {
       return event.wheelDelta < 0;
@@ -24,35 +27,37 @@ function checkScrollDirectionIsDown(event) {
 
 slide1.onscroll = scrollEnd1;
 function scrollEnd1() {
-   if ((slide1.scrollTop + slide1.clientHeight) == slide1.scrollHeight) {
+   if ((slide1.scrollTop + slide1.clientHeight) == slide1.scrollHeight && slide0.classList.contains('slide--close')) {
       slide1.classList.add('slide--close');
+      slide2.classList.remove('scroll--disabled');
    };
 };
 
 slide2.onscroll = scrollEnd2;
 function scrollEnd2() {
-   if ((slide2.scrollTop + slide2.clientHeight) == slide2.scrollHeight) {
+   if ((slide2.scrollTop + slide2.clientHeight) == slide2.scrollHeight && slide1.classList.contains('slide--close')) {
       slide2.classList.add('slide--close');
+      slide3.classList.remove('scroll--disabled');
    };
 };
 
 slide3.onscroll = scrollEnd3;
 function scrollEnd3() {
-   if ((slide3.scrollTop + slide3.clientHeight) == slide3.scrollHeight) {
+   if ((slide3.scrollTop + slide3.clientHeight) == slide3.scrollHeight && slide1.classList.contains('slide--close')) {
       slide3.classList.add('slide--close');
+      slide4.classList.remove('scroll--disabled');
    };
 };
 
 slide4.onscroll = scrollEnd4;
 function scrollEnd4() {
-   if ((slide4.scrollTop + slide4.clientHeight) == slide4.scrollHeight) {
+   if ((slide4.scrollTop + slide4.clientHeight) == slide4.scrollHeight && slide1.classList.contains('slide--close')) {
       slide4.classList.add('slide--close');
    };
 };
 
 // Reset slides to initial states
 resetButton.onclick = resetSlides;
-
 function resetSlides() {
    setTimeout(() => slide0.classList.remove('slide--close'), 1800);
    setTimeout(() => {
