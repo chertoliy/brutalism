@@ -6,7 +6,7 @@ const slide2 = document.querySelector('.slide-02');
 const slide3 = document.querySelector('.slide-03');
 const slide4 = document.querySelector('.slide-04');
 const removeSlide = document.querySelector('.slide--close');
-const resetButton = document.querySelector('.background__link');
+const resetButton = document.querySelector('.background__reset');
 
 // Remove slides after end of scroll
 slide0.addEventListener('wheel', checkScrollDirection);
@@ -62,19 +62,23 @@ function resetSlides() {
    setTimeout(() => slide0.classList.remove('slide--close'), 1800);
    setTimeout(() => {
       slide1.classList.remove('slide--close');
-      slide1.scrollTop = 0
+      slide1.scrollTop = 0;
+      slide1.classList.add('scroll--disabled');
    }, 1400);
    setTimeout(() => {
       slide2.classList.remove('slide--close');
-      slide2.scrollTop = 0
+      slide2.scrollTop = 0;
+      slide2.classList.add('scroll--disabled');
    }, 1000);
    setTimeout(() => {
       slide3.classList.remove('slide--close');
-      slide3.scrollTop = 0
+      slide3.scrollTop = 0;
+      slide3.classList.add('scroll--disabled');
    }, 600);
    setTimeout(() => {
       slide4.classList.remove('slide--close');
-      slide4.scrollTop = 0
+      slide4.scrollTop = 0;
+      slide4.classList.add('scroll--disabled');
    }, 200);
 };
 
