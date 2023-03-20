@@ -1,23 +1,19 @@
 // Global variables
-const body = document.querySelector('body')
 const slide0 = document.querySelector('.slide-00');
 const slide1 = document.querySelector('.slide-01');
 const slide2 = document.querySelector('.slide-02');
 const slide3 = document.querySelector('.slide-03');
 const slide4 = document.querySelector('.slide-04');
-const removeSlide = document.querySelector('.slide--close');
 const resetButton = document.querySelector('.background__reset');
 
 // Remove slides after end of scroll
 slide0.addEventListener('wheel', checkScrollDirection);
-
 function checkScrollDirection(event) {
    if (checkScrollDirectionIsDown(event)) {
       slide0.classList.add('slide--close');
       slide1.classList.remove('scroll--disabled');
    };
 };
-
 function checkScrollDirectionIsDown(event) {
    if (event.wheelDelta) {
       return event.wheelDelta < 0;
@@ -86,6 +82,6 @@ function resetSlides() {
 window.onload = mobileDisableScrollEnd;
 function mobileDisableScrollEnd() {
    if (window.innerWidth <= 415) {
-      checkScrollDirectionIsDown = () => {};
+      checkScrollDirectionIsDown = () => { };
    };
 };
