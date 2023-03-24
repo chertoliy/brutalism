@@ -1,17 +1,13 @@
 // Global variables
-const slide0 = document.querySelector('.slide-00');
-const slide1 = document.querySelector('.slide-01');
-const slide2 = document.querySelector('.slide-02');
-const slide3 = document.querySelector('.slide-03');
-const slide4 = document.querySelector('.slide-04');
+const slides = document.getElementsByClassName('slide');
 const resetButton = document.querySelector('.background__reset');
 
 // Remove slides after end of scroll
-slide0.onwheel = checkScrollDirection;
+slides[0].onwheel = checkScrollDirection;
 function checkScrollDirection(event) {
    if (checkScrollDirectionIsDown(event)) {
-      slide0.classList.add('slide--close');
-      slide1.classList.remove('scroll--disabled');
+      slides[0].classList.add('slide--close');
+      slides[1].classList.remove('scroll--disabled');
    };
 };
 function checkScrollDirectionIsDown(event) {
@@ -21,55 +17,55 @@ function checkScrollDirectionIsDown(event) {
    return event.deltaY > 0;
 };
 
-slide1.onscroll = () => {
-   if ((slide1.scrollTop + slide1.clientHeight) == slide1.scrollHeight) {
-      slide1.classList.add('slide--close');
-      slide2.classList.remove('scroll--disabled');
+slides[1].onscroll = () => {
+   if ((slides[1].scrollTop + slides[1].clientHeight) == slides[1].scrollHeight) {
+      slides[1].classList.add('slide--close');
+      slides[2].classList.remove('scroll--disabled');
    };
 };
 
-slide2.onscroll = () => {
-   if ((slide2.scrollTop + slide2.clientHeight) == slide2.scrollHeight) {
-      slide2.classList.add('slide--close');
-      slide3.classList.remove('scroll--disabled');
+slides[2].onscroll = () => {
+   if ((slides[2].scrollTop + slides[2].clientHeight) == slides[2].scrollHeight) {
+      slides[2].classList.add('slide--close');
+      slides[3].classList.remove('scroll--disabled');
    };
 };
 
-slide3.onscroll = () => {
-   if ((slide3.scrollTop + slide3.clientHeight) == slide3.scrollHeight) {
-      slide3.classList.add('slide--close');
-      slide4.classList.remove('scroll--disabled');
+slides[3].onscroll = () => {
+   if ((slides[3].scrollTop + slides[3].clientHeight) == slides[3].scrollHeight) {
+      slides[3].classList.add('slide--close');
+      slides[4].classList.remove('scroll--disabled');
    };
 };
 
-slide4.onscroll = () => {
-   if ((slide4.scrollTop + slide4.clientHeight) == slide4.scrollHeight) {
-      slide4.classList.add('slide--close');
+slides[4].onscroll = () => {
+   if ((slides[4].scrollTop + slides[4].clientHeight) == slides[4].scrollHeight) {
+      slides[4].classList.add('slide--close');
    };
 };
 
 // Reset slides to initial states
 resetButton.onclick = () => {
-   setTimeout(() => slide0.classList.remove('slide--close'), 1800);
+   setTimeout(() => slides[0].classList.remove('slide--close'), 1800);
    setTimeout(() => {
-      slide1.classList.remove('slide--close');
-      slide1.classList.add('scroll--disabled');
-      slide1.scrollTop = 0;
+      slides[1].classList.remove('slide--close');
+      slides[1].classList.add('scroll--disabled');
+      slides[1].scrollTop = 0;
    }, 1400);
    setTimeout(() => {
-      slide2.classList.remove('slide--close');
-      slide2.classList.add('scroll--disabled');
-      slide2.scrollTop = 0;
+      slides[2].classList.remove('slide--close');
+      slides[2].classList.add('scroll--disabled');
+      slides[2].scrollTop = 0;
    }, 1000);
    setTimeout(() => {
-      slide3.classList.remove('slide--close');
-      slide3.classList.add('scroll--disabled');
-      slide3.scrollTop = 0;
+      slides[3].classList.remove('slide--close');
+      slides[3].classList.add('scroll--disabled');
+      slides[3].scrollTop = 0;
    }, 600);
    setTimeout(() => {
-      slide4.classList.remove('slide--close');
-      slide4.classList.add('scroll--disabled');
-      slide4.scrollTop = 0;
+      slides[4].classList.remove('slide--close');
+      slides[4].classList.add('scroll--disabled');
+      slides[4].scrollTop = 0;
    }, 200);
 };
 
